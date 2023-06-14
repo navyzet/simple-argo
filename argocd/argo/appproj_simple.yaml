@@ -1,0 +1,14 @@
+---
+apiVersion: argoproj.io/v1alpha1
+kind: AppProject
+metadata:
+  name: simple
+spec:
+  description: "Project for simple test"
+  destinations:
+    - namespace: "simple"
+      server: https://kubernetes.default.svc
+  sourceRepos:
+    - "*"
+  sourceNamespaces:
+    - "simple"
